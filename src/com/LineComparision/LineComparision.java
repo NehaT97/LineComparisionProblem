@@ -79,5 +79,6 @@ public class LineComparision
                 System.out.println("Length of the line is : " + calculateLengthByCartesianSystem(line2.getX1(), line2.getX2(), line2.getY1(), line2.getY2()));
 
                 isEqualTo(line1, line2);
+                compareTo(line1, line2);
          }
 }
