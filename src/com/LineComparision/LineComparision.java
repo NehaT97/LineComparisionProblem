@@ -49,6 +49,24 @@ public class LineComparision
                 return isEqual;
          }
 
+    /* UC3: compareTo method for lines using java compareTo */
+         public static int compareTo(Line line1, Line line2)
+         {
+                System.out.println("Line1 \t(x1, y1): ( " + line1.getX1() + ", " + line1.getY1() + ")" + "\t(x2, y2): ( " + line1.getX2() + ", " + line1.getY2() + ")");
+                System.out.println("Line2 \t(x1, y1): ( " + line2.getX1() + ", " + line2.getY1() + ")" + "\t(x2, y2): ( " + line2.getX2() + ", " + line2.getY2() + ")");
+                Double lengthOfLine1 = calculateLengthByCartesianSystem(line1.getX1(), line1.getX2(), line1.getY1(), line1.getY2());
+                Double lengthOfLine2 = calculateLengthByCartesianSystem(line2.getX1(), line2.getX2(), line2.getY1(), line2.getY2());
+                int result = lengthOfLine1.compareTo(lengthOfLine2);
+                if (0 == result) {
+                    System.out.println("Line1 and Line2 both are equals");
+                } else if (0 < result) {
+                    System.out.println("Line1 is larger than Line2");
+                } else {
+                    System.out.println("Line2 is larger than Line1");
+                }
+                return result;
+         }
+
         public static void main(String args[])
          {
                 System.out.println("Welcome to Line Comparison Computation Program");
